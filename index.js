@@ -17,7 +17,7 @@ app.use(express.json());
 
 
 const corsOptions = {
-  origin: 'https://authentication-frontend-pink.vercel.app/', // Your frontend URL
+  origin: 'https://authentication-frontend-ten.vercel.app/', // Your frontend URL
   methods: 'GET,POST,PUT,DELETE',
   credentials: true, // Allow cookies
 };
