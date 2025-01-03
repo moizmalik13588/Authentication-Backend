@@ -14,12 +14,16 @@ app.use(cookieParser());
 app.use(express.json());
 
 // CORS Configuration
-app.use(
-  cors({
-    origin: "http://localhost:5173", // Frontend URL
-    credentials: true,              // Allow cookies and headers
-  })
-);
+
+
+const corsOptions = {
+  origin: 'https://authentication-frontend-pink.vercel.app/', // Your frontend URL
+  methods: 'GET,POST,PUT,DELETE',
+  credentials: true, // Allow cookies
+};
+
+app.use(cors(corsOptions));
+
 
 // Routes
 app.use("/api/v1", userRoutes);
